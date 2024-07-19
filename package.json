@@ -1,0 +1,31 @@
+{
+  "name": "telegram-to-function-server",
+  "version": "1.0.0",
+  "description": "Node.js based server that allows you to forward messages from your Telegram Bot to the locally started Firebase Functions emulator, so you can test the Bot using the Test Bot instead of the Production one.",
+  "main": "main.js",
+  "scripts": {
+    "build": "node esbuild.js",
+    "start-server": "npm run build && node dist/main.js",
+    "set-web-hook": "npm run build && node dist/main.js --web-hook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GofSoftware/telegram-to-function-server.git"
+  },
+  "keywords": [
+    "Telegram",
+    "Bot",
+    "Server"
+  ],
+  "author": "Vitalii Sliesarenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GofSoftware/telegram-to-function-server/issues"
+  },
+  "homepage": "https://github.com/GofSoftware/telegram-to-function-server#readme",
+  "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.64.7",
+    "esbuild": "^0.23.0",
+    "typescript": "^5.5.3"
+  }
+}
